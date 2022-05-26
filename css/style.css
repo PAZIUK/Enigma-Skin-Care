@@ -11,6 +11,12 @@
 body{
     box-sizing: border-box;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1 1 auto;
 }
 
 header{
@@ -84,4 +90,120 @@ section.hello{
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+}
+
+section.services .container .title{
+    font-family: var(--font-1);
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 4rem;
+}
+section.services .container .services__block{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    min-height: 30rem;
+}
+section.services .container .service{
+    position: relative;
+    overflow: hidden;
+}
+section.services .container .service img,
+section.services .container .service .blur,
+section.services .container .service .hover__block{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+section.services .container .service img{
+    z-index: 1;
+}
+section.services .container .service .hover__block{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background-color: rgba(0,0,0,.4);
+    transition: all .7s ease;
+    transform: scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+}
+section.services .container .service .hover__block a{
+    text-decoration: none;
+    font-family: var(--font-1);
+    font-size: 1.4rem;
+    color: var(--color-3);
+    margin-bottom: 1rem;
+    transition: all .5s ease;
+}
+section.services .container .service .hover__block a:hover{
+    color: var(--color-2);
+}
+section.services .container .service .hover__block a.Main{
+    padding: .5rem 1.5rem;
+    margin-top: 2rem;
+    background-color: var(--color-3);
+    color: var(--color-2);
+}
+section.services .container .service .hover__block a.Main:hover{
+    background-color: var(--color-2);
+    color: var(--color-1);
+}
+section.services .container .service:hover .hover__block{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+section.services .container .service .blur{
+    z-index: 2;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+}
+
+section.moreServices{
+    display: flex;
+    flex-direction: column;
+}
+section.moreServices .topic{
+    background-image: url("../img/services/topic.webp");
+    background-size: cover;
+    background-position: center;
+}
+section.moreServices .topic .container{
+    display: flex;
+    justify-content: center;
+}
+section.moreServices .topic .container .title{
+    font-size: 3rem;
+    color: var(--color-2);
+    font-family: var(--font-1);
+    padding: 5rem 0;
+    text-align: center;
+}
+section.moreServices .container .services{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    padding-top: 5rem;
+}
+section.moreServices .container .services .service .photo img{
+    width: 100%;
+}
+section.moreServices .container .services .service .info{
+    display: flex;
+}
+section.moreServices .container .services .service .info a{
+    text-align: center;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: var(--color-2);
+    background-color: #ff8a3d;
+    transition: all .7s ease;
+    flex: 1 1 auto;
+}
+section.moreServices .container .services .service .info a:hover{
+    background-color: #ecc826;
 }
