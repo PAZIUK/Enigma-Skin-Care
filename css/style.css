@@ -15,9 +15,11 @@ body{
 
 header{
     top: 0;
-    position: sticky;
-    background-color: var(--color-1);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
     color: var(--color-2);
+    width: 100%;
+    
 }
 header .container{
     display: flex;
