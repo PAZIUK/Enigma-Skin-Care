@@ -43,7 +43,7 @@ header .container .navbar{
     margin: 0 2rem;
     flex:  1 1 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 0;
 }
 header .container .navbar li{
