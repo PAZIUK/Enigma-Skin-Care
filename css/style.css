@@ -22,7 +22,7 @@ main{
 header{
     top: 0;
     position: absolute;
-    background-color: #81d8d0;
+    background-color: #b3e7e5;
     color: var(--color-1);
     width: 100%;
     font-size: 20px;
@@ -35,7 +35,7 @@ header .container{
     font-family: var(--font-1);
 }
 header .container .logo img{
-    width: 11rem;
+    width: 8rem;
 }
 
 
@@ -65,7 +65,7 @@ header .container .navbar li a:after{
     position: absolute;
     bottom: 0;
     left: -100%;
-    background-color: #f768cc;
+    background-color: #06d7d0;
     transition: all .7s ease;
 }
 header .container .navbar li a:hover:after{
