@@ -22,7 +22,7 @@ main{
 header{
     top: 0;
     position: absolute;
-    background-color: #ffd3e6;
+    background-color: #81d8d0;
     color: var(--color-1);
     width: 100%;
     font-size: 20px;
@@ -52,7 +52,7 @@ header .container .navbar li{
 header .container .navbar li a{
     flex: 1 1 auto;
     text-decoration: none;
-    color: var(--color-1);
+    color: var(--color-1   );
     position: relative;
     overflow: hidden;
     padding: 1rem 2rem;
