@@ -22,9 +22,10 @@ main{
 header{
     top: 0;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: var(--color-2);
+    background-color: #ffd3e6;
+    color: var(--color-1);
     width: 100%;
+    
     
 }
 header .container{
@@ -34,8 +35,10 @@ header .container{
     font-family: var(--font-1);
 }
 header .container .logo img{
-    width: 4rem;
+    width: 11rem;
 }
+
+header .container img
 header .container .navbar{
     margin: 0 2rem;
     flex:  1 1 auto;
@@ -49,7 +52,7 @@ header .container .navbar li{
 header .container .navbar li a{
     flex: 1 1 auto;
     text-decoration: none;
-    color: var(--color-2);
+    color: var(--color-1);
     position: relative;
     overflow: hidden;
     padding: 1rem 2rem;
@@ -91,7 +94,7 @@ section.hello{
     background-image: url("../img/hello.jpg");
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 150vh;
 }
 
 section.services .container .title{
