@@ -25,7 +25,7 @@ header{
     background-color: #ffd3e6;
     color: var(--color-1);
     width: 100%;
-    
+    font-size: 20px;
     
 }
 header .container{
@@ -38,7 +38,7 @@ header .container .logo img{
     width: 11rem;
 }
 
-header .container img
+
 header .container .navbar{
     margin: 0 2rem;
     flex:  1 1 auto;
@@ -56,6 +56,7 @@ header .container .navbar li a{
     position: relative;
     overflow: hidden;
     padding: 1rem 2rem;
+    margin-right: 5px;
 }
 header .container .navbar li a:after{
     content: "";
@@ -64,7 +65,7 @@ header .container .navbar li a:after{
     position: absolute;
     bottom: 0;
     left: -100%;
-    background-color: #33cccc;
+    background-color: #f768cc;
     transition: all .7s ease;
 }
 header .container .navbar li a:hover:after{
@@ -94,7 +95,7 @@ section.hello{
     background-image: url("../img/hello.jpg");
     background-size: cover;
     background-position: center;
-    min-height: 150vh;
+    min-height: 140vh;
 }
 
 section.services .container .title{
