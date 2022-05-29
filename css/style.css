@@ -1,11 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root{
     --color-1: #131313;
-    --color-2: #e8e8e8;
+    --color-2: #ffffff;
     --color-3:#33cccc;
+    --color-4:#06d7d0;
+    --color-5:#D43C3C;
+    --color-6:rgba(0,0,0,.4);
+    --color-7:#313131;
+    --color-8:#f4f6f9;
+
 
     --font-1:'Lexend Deca', sans-serif;
+    --font-2: 'Montserrat', sans-serif;
 }
 
 body{
@@ -21,12 +28,12 @@ main{
 
 header{
     top: 0;
-    position: absolute;
+    position: sticky;
     background-color: #b3e7e5;
     color: var(--color-1);
     width: 100%;
     font-size: 20px;
-    
+    z-index: 10000;
 }
 header .container{
     display: flex;
@@ -37,8 +44,6 @@ header .container{
 header .container .logo img{
     width: 8rem;
 }
-
-
 header .container .navbar{
     margin: 0 2rem;
     flex:  1 1 auto;
@@ -49,124 +54,263 @@ header .container .navbar{
 header .container .navbar li{
     display: flex;
 }
+header .container .navbar li:not(:first-child){
+    border-left: .1rem solid var(--color-4);
+}
 header .container .navbar li a{
-    flex: 1 1 auto;
-    text-decoration: none;
-    color: var(--color-1   );
+    padding: .5rem 1rem;
     position: relative;
     overflow: hidden;
-    padding: 1rem 2rem;
-    margin-right: 5px;
+    text-decoration: none;
+    color: var(--color-1);
+    transition: all .7s ease;
+    z-index: 1;
 }
 header .container .navbar li a:after{
     content: "";
-    height: .2rem;
+    height: 100%;
     width: 100%;
     position: absolute;
     bottom: 0;
-    left: -100%;
-    background-color: #06d7d0;
+    right: -100%;
+    background-color: var(--color-4);
     transition: all .7s ease;
+    z-index: -1;
 }
 header .container .navbar li a:hover:after{
-    left: 0;
+    right: 0;
 }
-header .container .media{
-    display: flex;
+header .container .navbar li a:hover{
+    color: var(--color-2);
+}
+header .container .headerBtn,
+section.appointment .appointment__block .appointmentForm form button{
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    color: var(--color-2);
+    background-color: var(--color-5);
+    text-decoration: none;
+    border: none;
+}
+header .container a.login{
+    background-color: var(--color-2);
+    margin-left: 1rem;
+    padding: .2rem;
+    border-radius: 10px ;
+    text-decoration: none;
+    border: none;
+}
+header nav form button{
+    margin-left: .5rem;
+    border: none;
+    background: none;
     padding: 0;
-    margin: 0;
+    transform: scaleX(-1); 
+    font-size: 1.5rem;
+    transition: all .4s ease;
+    color: var(--color-5);
+    margin: 0 0 0 1rem;
 }
-header .container .media li{
-    display: flex;
-    margin-right: 1rem;
+header nav form button:hover{
+    transform: translate(.2rem,-.2rem) scaleX(-1); 
 }
-header .container .media li a{
-    flex: 1 1 auto;
-    transition: all .5s ease;
+header .container a.login img{
+    width: 2.5rem;
 }
-header .container .media li a:hover{
+header .container .headerBtn,
+section.hello .container .infoBlock a,
+section.services .container .myServices .service .service__block a,
+section.services .container .myServices .service .service__block,
+section.mainGallery .container .gallerySliderBlock a,
+section.appointment .appointment__block .appointmentForm form button,
+header .container a.login{
+    transition: all .4s ease;
+}
+header .container .headerBtn:hover,
+section.hello .container .infoBlock a:hover,
+section.services .container .myServices .service .service__block a.main:hover,
+section.appointment .appointment__block .appointmentForm form button:hover,
+header .container a.login:hover,
+main#admin .buttn:hover{
     transform: translate(.2rem,-.2rem);
-}
-header .container .media li a img{
-    width: 2rem;
 }
 
 section.hello{
     background-image: url("../img/hello.jpg");
     background-size: cover;
     background-position: center;
-    min-height: 140vh;
+    min-height: 100vh;
+    display: flex;
+}
+section.hello .container{
+    padding-left: 5rem;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+section.hello .container .infoBlock{
+    background-color: var(--color-6);
+    padding: 3rem 1.5rem;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+section.hello .container .infoBlock .slogan{
+    font-size: 3rem;
+    color: var(--color-2);
+    font-family: var(--font-2);
+    font-weight: 400;
+    margin: 0;
+}
+section.hello .container .infoBlock a,
+section.services .container .myServices .service .service__block a.main,
+section.mainGallery .container .gallerySliderBlock a{
+    text-decoration: none;
+    color: var(--color-2);
+    margin-top: 1rem;
+    background-color: var(--color-5);
+    padding: .5rem 2rem;
+    margin-right: auto;
+    font-size: 1.5rem;
 }
 
-section.services .container .title{
+.container .title{
     font-family: var(--font-1);
     font-size: 4rem;
     text-align: center;
     padding-top: 4rem;
 }
-section.services .container .services__block{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    min-height: 30rem;
+section.services .container .desc{
+    font-family: var(--font-2);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    padding: 0 3rem;
 }
-section.services .container .service{
+section.services .container .myServices{
+    display: flex;
+    height: 40rem;
+}
+section.services .container .myServices .mainService{
+    margin-right: .5rem;
+    flex: 1;
+}
+section.services .container .myServices .service{
+    height: 100%;
     position: relative;
     overflow: hidden;
 }
-section.services .container .service img,
-section.services .container .service .blur,
-section.services .container .service .hover__block{
+section.services .container .myServices .service .name{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all .4s ease;
+}
+section.services .container .myServices .service:hover .name{
+    left: -150%;
+}
+section.services .container .myServices .service .name p{
+    margin: 0;
+    font-size: 2rem;
+    position: relative;
+    padding: .5rem .5rem .5rem 1.5rem;
+    background-color: var(--color-6);
+    color: var(--color-2);
+    border-left: .3rem solid var(--color-5);
+    font-family: var(--font-2);
+}
+section.services .container .myServices .service .name p::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -4rem;
+    border: 2rem solid var(--color-6);
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+section.services .container .myServices .service .service__block{
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
-}
-section.services .container .service img{
-    z-index: 1;
-}
-section.services .container .service .hover__block{
-    display: flex;
     height: 100%;
+    background-color: var(--color-6);
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 10;
-    background-color: rgba(0,0,0,.4);
-    transition: all .7s ease;
-    transform: scale(0.5);
+    transform: scale(.5);
     opacity: 0;
-    visibility: hidden;
 }
-section.services .container .service .hover__block a{
-    text-decoration: none;
-    font-family: var(--font-1);
-    font-size: 1.4rem;
-    color: var(--color-3);
-    margin-bottom: 1rem;
-    transition: all .5s ease;
-}
-section.services .container .service .hover__block a:hover{
-    color: var(--color-2);
-}
-section.services .container .service .hover__block a.Main{
-    padding: .5rem 1.5rem;
-    margin-top: 2rem;
-    background-color: var(--color-3);
-    color: var(--color-2);
-}
-section.services .container .service .hover__block a.Main:hover{
-    background-color: var(--color-2);
-    color: var(--color-1);
-}
-section.services .container .service:hover .hover__block{
-    opacity: 1;
-    visibility: visible;
+section.services .container .myServices .service:hover .service__block{
     transform: scale(1);
+    opacity: 1;
 }
-section.services .container .service .blur{
-    z-index: 2;
-    height: 100%;
-    background-color: rgba(0,0,0,.4);
+section.services .container .myServices .service .service__block a:not(:first-child){
+    margin-top: 1rem;
+}
+section.services .container .myServices .service .service__block a:not(:last-child){
+    color: var(--color-2);
+    text-decoration: none;
+    font-weight: 500;
+}
+section.services .container .myServices .service .service__block a:not(:last-child):hover{
+    color: var(--color-4);
+    transform: scale(1.1);
+}
+section.services .container .myServices .service .service__block a.main{
+    margin: 2rem 0 0;
+    border-radius: 10px;
+}
+section.services .container .myServices .service img{
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+section.services .container .myServices .mainService .service{
+    background-color: grey;
+}
+section.services .container .myServices .mainService .service img{
+    top: -20%;
+}
+section.services .container .myServices .otherServices{
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: .5rem;
+}
+section.services .container .myServices .otherServices .service{
+    background-color: grey;
+}
+
+section.mainGallery .container .gallerySliderBlock .btns{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+section.mainGallery .container .gallerySliderBlock .btns button{
+    background-color: var(--color-6);
+    border: none;
+    color: var(--color-2);
+    font-weight: 600;
+    font-size: 2rem;
+    padding: .5rem 1rem;
+}
+section.mainGallery .container .gallerySliderBlock a{
+    position: absolute;
+    bottom: 2rem;
+    left:50%;
+    padding: .5rem 3rem;
+    border-radius: 10px;
+    transform: translate(-50%,0);
+}
+section.mainGallery .container .gallerySliderBlock a:hover{
+    transform: translate(calc(-50% + .2rem),-.2rem);
 }
 
 section.moreServices{
@@ -212,4 +356,629 @@ section.moreServices .container .services .service .info a{
 }
 section.moreServices .container .services .service .info a:hover{
     background-color: #ecc826;
+}
+
+section.appointment .appointment__block{
+    display: flex;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+section.appointment .appointment__block .info,
+section.appointment .appointment__block .appointmentForm{
+    flex: 1;
+}
+section.appointment .appointment__block .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.appointment .appointment__block .info a{
+    text-align: center;
+}
+section.appointment .appointment__block .info a img{
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+section.appointment .appointment__block .info .photo{
+    text-align: center;
+}
+section.appointment .appointment__block .info .photo img{
+    width: 54%;
+    border-radius: 10px;
+}
+section.appointment .appointment__block .appointmentForm{
+    margin-left: 2rem;
+}
+section.appointment .appointment__block .appointmentForm h2{
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: var(--font-2);
+}
+section.appointment .appointment__block .appointmentForm form{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+section.appointment .appointment__block .appointmentForm form .formRow{
+    display: flex;
+    margin-bottom: 1rem;
+}
+section.appointment .appointment__block .appointmentForm form .formRow .inputBlock{
+    display: flex;
+    flex-direction: column;
+}
+section.appointment .appointment__block .appointmentForm form .formRow .inputBlock label{
+    font-size: 1.3rem;
+    font-family: var(--font-2);
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+section.appointment .appointment__block .appointmentForm form .formRow .inputBlock input,
+section.appointment .appointment__block .appointmentForm form .formRow .inputBlock textarea{
+    padding: .5rem .7rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-8);
+}
+section.appointment .appointment__block .appointmentForm form .formRow .inputBlock textarea{
+    height: 10rem;
+}
+section.appointment .appointment__block .appointmentForm form .formRow .inputBlock:not(:last-child){
+    margin-right: 2rem;
+}
+section.appointment .appointment__block .appointmentForm form .formRow:not(:last-child) .inputBlock{
+    flex: 1;
+}
+section.appointment .appointment__block .appointmentForm form button{
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-family: var(--font-2);
+}
+
+main.message{
+    background-image: url("../img/hello.jpg");
+    position: relative;
+    background-position: 50% 80%;
+    display: flex;
+    min-height: 30rem;
+    position: relative;
+    background-size: cover;
+}
+main.message .blur{
+    background-color: rgba(255,255,255,.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+main.message .container{
+    z-index: 2;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main.message .container .successBlock .head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 10px 10px 0 0;
+}
+main#success .container .successBlock .head{
+    background-color: var(--color-4);
+}
+main#error .container .successBlock .head{
+    background-color: var(--color-5);
+}
+main.message .container .successBlock .head img{
+    width: 5rem;
+}
+main.message .container .successBlock .body{
+    padding: 2rem;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-1);
+    color: var(--color-2);
+}
+main.message .container .successBlock .body .congrats{
+    font-size: 1.4rem;
+    font-family: var(--font-3);
+    text-align: center;
+    margin: 0;
+}
+main.message .container .successBlock .body a{
+    text-decoration: none;
+    color: var(--color-7);
+    font-weight: 500;
+    padding: .5rem 0;
+    width: 50%;
+    text-align: center;
+    transition: all .5s ease;
+    margin-top: 1rem;
+    border-radius: 30px;
+    font-family: var(--font-4);
+    background-color: var(--color-4);
+}
+main.message .container .successBlock .body a:hover{
+    width: 60%;
+}
+main#error .container .successBlock .body h2{
+    font-family: var(--font-2);
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+}
+main#error .container .successBlock .body h3{
+    font-family: var(--font-4);
+}
+main#error .container .successBlock .body p{
+    font-family: var(--font-1);
+    margin-top: .5rem;
+}
+
+main#signIn{
+    min-height: 35rem;
+}
+main#signIn .container .form__block{
+    padding: 0 2rem 2rem;
+    background-color: var(--color-1);
+    margin: 2rem 0;
+    height: calc(100% - 4rem);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main#signIn .container .form__block .photo{
+    text-align: center;
+    margin: 2rem 0;
+}
+main#signIn .container .form__block .photo img{
+    width: 50%;
+    border-radius: 10px;
+}
+main#signIn .container .form__block .title{
+    font-size: 2rem;
+    margin:  0 0 1.5rem;
+    padding: 0;
+    padding-bottom: 1.5rem;
+    color: var(--color-2);
+    font-family: var(--font-2);
+    border-bottom: .1rem solid rgba(255,255,255, 0.3);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+main#signIn .container form{
+    display: flex;
+    flex-direction: column;
+}
+main#signIn .container form .formInput{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+main#signIn .container form label{
+    font-size: 1rem;
+    color: var(--color-2);
+    font-weight: 500;
+    font-family: var(--font-2);
+    margin-bottom: .5rem;
+}
+main#signIn .container form input{
+    padding: .5rem 3.5rem;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 1.5rem;
+    position: relative;
+    flex: 1 1 auto;
+}
+main#signIn .container form .formInput img{
+    position: absolute;
+    width: 2rem;
+    bottom: 0;
+    left: 1rem;
+    transform: translate(0,-87%);
+}
+main#signIn .container form button{
+    margin: 2rem auto 0;
+    border: none;
+    padding: .5rem 2rem;
+    border-radius: 30px;
+    font-family: var(--font-2);
+    background-color: var(--color-3);
+    font-weight: 500;
+    transition: all .5s ease;
+    color: var(--color-7);
+}
+main#signIn .container form button:hover{
+    padding: .5rem 3rem;
+}
+main#signIn .container .form__block .signInError.error{
+    margin-top: 1.1rem;
+    background-color: var(--color-5);
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 500;
+    color:  var(--color-2);
+    font-family: var(--font-1);
+    padding: .5rem;
+}
+
+main#admin{
+    display: flex;
+}
+main#admin .container{
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 30rem;
+}
+main#admin aside{
+    flex: 1;
+    background-color: var(--color-1);
+    margin: 1rem 0;
+    border-radius: 10px 0 0 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+main#admin aside .logo img{
+    border-radius: 10px;
+}
+main#admin aside ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    margin: .5rem 0 0;
+}
+main#admin aside ul li{
+    margin-top: .5rem;
+}
+main#admin .buttn{
+    width: 100%;
+    padding: .5rem 1rem;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    background-color: var(--color-4);
+    color: var(--color-2);
+    font-family: var(--font-4);
+    transition: all .5s ease;
+}
+main#admin aside ul.actions{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+main#admin .buttn i{
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 1rem;
+    position: absolute;
+    font-size: 1.5rem;
+}
+main#admin aside .logo{
+    text-align: center;
+    width: 100%;
+}
+main#admin aside .logo img{
+    width: 60%;
+}
+main#admin section.content{
+    flex: 3;
+    margin: 1rem 0;
+    background-color: #f4f6f9;
+    border-radius: 0 10px 10px 0;
+    padding: 1.5rem;
+}
+main#admin section.content .content__block {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+main#admin section.content .content__block.active{
+    display: flex;
+}
+main#admin section.content .content__block .title{
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--font-4);
+    font-weight: 400;
+    margin: 2rem 0;
+}
+main#admin section.content .content__block#getStarted h3{
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-family: var(--font-3);
+    line-height: 2rem;
+    text-align: center;
+}
+main#admin section.content .content__block#getStarted p{
+    margin-top: 1rem;
+    text-align: center;
+}
+main#admin section.content .btns{
+    width: 25%;
+    margin-top: 2rem;
+}
+main#admin section.content .btns button{
+    margin-top: .5rem;
+    width: 100%;
+}
+main#admin section.content table{
+    background-color: var(--color-2);
+    font-family: var(--font-1);
+    font-size: .9rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+main#admin section.content table tr:not(:first-child){
+    border-top: .05rem solid #e4e4e4;
+}
+main#admin section.content table thead tr td{
+    font-weight: 500;
+    font-family: var(--font-3);
+}
+main#admin section.content table tr td{
+    border-bottom: none;
+}
+main#admin section.content table tr td a{
+    text-decoration: none;
+    border-radius: 10px;
+    padding: .5rem;
+    color: var(--color-5);
+}
+main#admin section.content table tr td a,
+main#admin section.content table tr td button{
+    transition: all .4s ease;
+}
+main#admin section.content table tr td button{
+    border: .05rem solid #e4e4e4;
+    padding: 0;
+    background: none;
+}
+main#admin section.content table tr td button img{
+    opacity: 0;
+    transition: all .4s ease-in;
+}
+main#admin section.content table tr td a:hover,
+main#admin section.content table tr td button:hover,
+main#admin section.content form#personalSettings a.passwordRecoveryOpen:hover{
+    transform: translate(0,-.2rem);
+}
+main#admin section.content table tr td a:hover,
+main#admin section.content form#personalSettings a.passwordRecoveryOpen:hover{
+    background-color: var(--color-5);
+    color: var(--color-2);
+}
+main#admin section.content table tr td button:hover img{
+    opacity: 1;
+}
+main#admin section.content table tr td img{
+    width: 1.5rem;
+}
+main#admin section.content form#settingsForm,
+main#admin section.content form#personalSettings{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} 
+main#admin section.content form#settingsForm button,
+main#admin section.content form#personalSettings button{
+    margin: 1.5rem auto 0;
+    width: unset;
+}
+main#admin section.content form#personalSettings a.passwordRecoveryOpen{
+    margin: 0;
+    transition: all .4s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-1);
+    width: 50%;
+}
+main#admin section.content .content__block__child{
+    display: flex;
+    flex: 1 1 auto;
+    background-color: var(--color-2);
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+main#admin section.content .content__block__child.passwordRecovery{
+    flex-direction: column;
+    position: relative;
+    background: none;
+    padding: 0;
+}
+main#admin section.content .content__block__child.passwordRecovery .head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    background-color: var(--color-2);
+    transition: all .7s ease;
+    z-index: 2;
+}
+main#admin section.content .content__block__child.passwordRecovery .head.active{
+    border-radius: 10px 10px 0 0;
+}
+main#admin section.content .content__block__child.passwordRecovery .head button{
+    width: 50%;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery{
+    padding-top: 1rem;
+    transition: all .7s ease;
+    z-index: -1;
+    border-top: .05rem solid #f1f1f1;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-2);
+    padding-bottom: 1rem;
+    display: none;
+    border-radius: 0 0 10px 10px;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery.active{
+    display: unset;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery .inputBlock{
+    display: flex;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery .inputBlock:not(:first-child){
+    margin-top: 1rem;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery .inputBlock p{
+    width: 50%;
+    justify-content: center;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery .inputBlock p.error{
+    color: red;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery .inputBlock .input{
+    width: 25%;
+    margin: 0 auto;
+    position: relative;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery .inputBlock .input .passwordImg{
+    font-size: 1.5rem;
+    width: 1.7rem;
+    cursor: pointer;
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+    transform: translate(0,-50%);
+    display: none;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery .inputBlock .input .passwordImg.active{
+    display: unset;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery input{
+    width: 100%;
+    padding-right: 2.2rem;
+    border: .1rem solid transparent;
+}
+main#admin section.content .content__block__child.passwordRecovery .passwordRecovery input.error{
+    border-color: red;
+}
+main#admin section.content .content__block__child.passwordRecovery button{
+    width: 100%;
+}
+main#admin section.content .content__block__child:not(:first-child){
+    margin-top: 1rem;
+}
+main#admin section.content .content__block__child p{
+    margin: 0;
+    font-family: var(--font-4);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+main#admin section.content .content__block__child p img,
+main#admin section.content .content__block__child button img{
+    width: 2rem;
+    margin-right: 1rem;
+}
+main#admin section.content form#personalSettings a.passwordRecoveryOpen img{
+    width: 1.5rem;
+}
+main#admin section.content .content__block__child input,
+main#admin section.content .content__block__child textarea,
+main#admin section.content form#personalSettings a.passwordRecoveryOpen{
+    padding: .5rem;
+    text-align: center;
+    border: none;
+    background-color: #00000008;
+    border-radius: 10px;
+    font-family: var(--font-1);
+}
+main#admin section.content .content__block__child input,
+main#admin section.content .content__block__child textarea{
+    width: 50%;
+}
+main#admin section.content .content__block__child textarea{
+    min-height: 10rem;
+    text-align: left;
+    padding: 1rem;
+}
+
+footer{
+    background-color: var(--color-7);
+}
+footer .container{
+    display: flex;
+    padding: 2rem 0;
+}
+footer .container .info,
+footer .container .map{
+    flex: 1;
+}
+footer .container .info{
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+footer .container .info a.logo{
+    text-align: center;
+}
+footer .container .info a.logo img{
+    border-radius: 10px;
+}
+footer .container .info ul.contacts,
+footer .container .info ul.hours{
+    padding: 0;
+    margin-top: 2rem;
+}
+footer .container .info ul.contacts li:not(:first-child),
+footer .container .info ul.hours li:not(:first-child){
+    margin-top: 1rem;
+}
+footer .container .info ul.contacts li{
+    display: flex;
+    align-items: center;
+}
+footer .container .info ul.contacts li img,
+footer .container .info ul.hours li img{
+    width: 2rem;
+    margin-right: 1rem;
+}
+footer .container .info ul.contacts li a,
+footer .container .info ul.contacts li p,
+footer .container .info ul.hours li{
+    color: var(--color-2);
+    text-decoration: none;
+    font-family: var(--font-2);
+    font-size: 1.2rem;
+    transition: all .4s ease;
+    margin: 0;
+}
+footer .container .info ul.contacts li a:hover{
+    margin-left: .5rem;
+}
+
+footer .container .info ul.hours li:not(:first-child) img{
+    opacity: 0;
+    visibility: hidden;
+}
+
+footer .container .map iframe{
+    width: 100%;
+    height: 100%;
 }
