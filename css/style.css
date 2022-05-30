@@ -335,7 +335,7 @@ section.mainGallery .container .gallerySliderBlock .slide.otherNext{
 section.mainGallery .container .btns{
     position: absolute;
     left: 50%;
-    width: 51rem;
+    width: 74rem;
     top: 50%;
     display: flex;
     justify-content: space-between;
