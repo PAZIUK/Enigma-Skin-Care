@@ -78,31 +78,31 @@
         <div class="container">
             <h2 class="title">OUR GALLERY</h2>
             <div class="gallerySliderBlock">
-            <div class="slide otherPrev" slide="1">
+                <div class="slide active" slide="1">
                     <img src="img/gallery/1.jpg" alt="">
                 </div>
-                <div class="slide afterPrev" slide="1">
+                <div class="slide" slide="2">
                     <img src="img/gallery/1.jpg" alt="">
                 </div>
-                <div class="slide prev" slide="2">
+                <div class="slide" slide="3">
                     <img src="img/gallery/2.jpg" alt="">
                 </div>
-                <div class="slide active" slide="3">
+                <div class="slide" slide="4">
                     <img src="img/gallery/3.jpg" alt="">
                 </div>
-                <div class="slide next" slide="4">
+                <div class="slide" slide="5">
                     <img src="img/gallery/4.jpg" alt="">
                 </div>
-                <div class="slide afterNext" slide="5">
+                <div class="slide" slide="6">
                     <img src="img/gallery/5.jpg" alt="">
                 </div>
-                <div class="slide otherNext" slide="6">
+                <div class="slide" slide="7">
                     <img src="img/gallery/5.jpg" alt="">
                 </div>
             </div>
             <a href="<?php echo CONFIG::getInstagram()?>" class="viewMore" target="_blank">See All</a>
             <div class="btns">
-                <button class="prev disable">‹</button>
+                <button class="prev">‹</button>
                 <button class="next">›</button>
             </div>
         </div>

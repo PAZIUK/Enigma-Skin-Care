@@ -312,13 +312,13 @@ section.mainGallery .container .gallerySliderBlock .slide img{
 }
 section.mainGallery .container .gallerySliderBlock .slide.active{
     transform: scale(1.2);
-    left: 19.5rem;
+    left: 20rem;
 }
 section.mainGallery .container .gallerySliderBlock .slide.prev{
     left: -23rem;
 }
 section.mainGallery .container .gallerySliderBlock .slide.next{
-    left: 55rem;
+    left: 56rem;
 }
 section.mainGallery .container .gallerySliderBlock .slide.afterPrev{
     left: -60rem;
