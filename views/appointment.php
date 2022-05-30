@@ -2,7 +2,12 @@
     if(isset($_POST)&&isset($_POST["appointment"])){
         USER::sendAppointment($_POST);
         ?>
-        <script>window.location.href = "index.php?action=appointmentSuccess"</script> 
+        <script>
+            let appointmentEndTime = new Date();
+            appointmentEndTime.setHours(appointmentEndTime.getHours() + 24)
+            localStorage.setItem('appointmentEndTime',appointmentEndTime)
+            window.location.href = "index.php?action=appointmentSuccess"
+        </script> 
         <?php
     }
 ?>
@@ -20,9 +25,12 @@
                     </div>
                 </div>
                 <div class="appointmentForm">
-                    <h2>Please call our office or fill out the form below, and we will reach out to confirm your appointment as soon as possible. We look forward to hearing from you!</h2>
-                    <form action="" method="POST">
-                        <input type="hidden" name="appointment">
+                    <h2>
+                        Please call our office or fill out the form below, and we will reach out to confirm your appointment as soon as possible. We look forward to hearing from you! <br> 
+                        Attention! You can send only 1 appointment in 24 hours.
+                    </h2>
+                    <form action="" method="POST" onsubmit="formAppointmentSubmit(event)">
+                        <input type="hidden" name="appointment" id="appointment">
                         <div class="formRow">
                             <div class="inputBlock">
                                 <label for="firstName">First name</label>
@@ -51,6 +59,7 @@
                         </div>
                         <button type="submit">SUBMIT</button>
                     </form>
+                    <p id="wait"><img src="img/assets/warning.png" alt="Warning">You can send 1 appointment in 24 hours!<img src="img/assets/warning.png" alt="Warning"></p>
                 </div>
             </div>
         </section>

@@ -20,11 +20,11 @@
                     </li>
                     <li>
                         <img src="img/assets/facebook.png" alt="Facebook">
-                        <a href="<?php echo CONFIG::getFacebook()?>">Enigma Skin Care</a>
+                        <a href="<?php echo CONFIG::getFacebook()?>" target="_blank">Enigma Skin Care</a>
                     </li>
                     <li>
                         <img src="img/assets/instagram.png" alt="Mail">
-                        <a href="<?php echo CONFIG::getInstagram()?>">Enigma Skin Care</a>
+                        <a href="<?php echo CONFIG::getInstagram()?>" target="_blank">Enigma Skin Care</a>
                     </li>
                 </ul>
                 <ul class="hours">
