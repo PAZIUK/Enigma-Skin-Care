@@ -6,10 +6,10 @@
             </a>
             <ul class="navbar">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="index.php#services">Services</a></li>
-                <li><a href="#footer">Locations</a></li>
-                <li><a href="#footer">Contact Us</a></li>
+                <li><a href="index.php#about">About Us</a></li>
+                <li><a href="index.php?action=services">Services</a></li>
+                <li><a href="index.php#contacts">Locations</a></li>
+                <li><a href="index.php#contacts">Contact Us</a></li>
             </ul>
             <a href="index.php?action=appointment" class="headerBtn">Book an Appointment</a>
             <?php

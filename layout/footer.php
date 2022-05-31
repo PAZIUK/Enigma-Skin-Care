@@ -2,14 +2,14 @@
     <footer id="footer">
         <div class="container">
             <div class="info">
-                <a class="logo" href="index.php">
-                    <img src="img/Enigma_logo.png" alt="Enigma Skin Care">
-                </a>
-                <ul class="contacts">
-                    <li>
-                        <img src="img/assets/location.png" alt="Location">
-                        <p>575 Lincoln Ave, Winnetka, IL 60093, USA</p>
-                    </li>
+                <div class="logo">
+                    <img src="img/Enigma_Logo.png" alt="TOP Masonry&amp;Tuckpointing">
+                </div>
+                <div class="text"><?php echo CONFIG::getDescription()?></div>
+            </div>
+            <div class="contact">
+                <h1 class="head">CONTACTS</h1>
+                <ul class="body">
                     <li>
                         <img src="img/assets/phone.png" alt="Phone">
                         <a href="tel:<?php echo CONFIG::getPhone()?>"><?php echo CONFIG::getFormatPhone(CONFIG::getPhone())?></a>
@@ -19,22 +19,28 @@
                         <a href="mailto:<?php echo CONFIG::getMail()?>"><?php echo CONFIG::getMail()?></a>
                     </li>
                     <li>
-                        <img src="img/assets/facebook.png" alt="Facebook">
-                        <a href="<?php echo CONFIG::getFacebook()?>" target="_blank">Enigma Skin Care</a>
+                        <img src="img/assets/location.png" alt="Location">
+                        <p><?php echo CONFIG::getLocation()?></p>
                     </li>
-                    <li>
-                        <img src="img/assets/instagram.png" alt="Mail">
-                        <a href="<?php echo CONFIG::getInstagram()?>" target="_blank">Enigma Skin Care</a>
-                    </li>
-                </ul>
-                <ul class="hours">
-                    <li><img src="img/assets/hours.png" alt="Location">Office Hours:</li>
-                    <li><img src="img/assets/hours.png" alt="Location">Mon-Sat: &nbsp;9am - 6pm</li>
-                    <li><img src="img/assets/hours.png" alt="Location">Sunday: &nbsp;Closed</li>
                 </ul>
             </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.024169337911!2d-87.7344177846863!3d42.10695317920465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fc4f733aec39d%3A0xce61b8040507f4f4!2s575%20Lincoln%20Ave%2C%20Winnetka%2C%20IL%2060093%2C%20USA!5e0!3m2!1sen!2sua!4v1653835270535!5m2!1sen!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="work">
+                <h3 class="head">OFFICE HOURS</h3>
+                <ul class="body">
+                    <li>Mon-Sat:  9am - 6pm</li>
+                    <li>Sunday:  Closed</li>
+                </ul>
+            </div>
+            <div class="menu">
+                <h3 class="head">MENU</h3>
+                <ul class="body">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li> 
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
             </div>
         </div>
     </footer>
