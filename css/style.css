@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root{
     --color-1: #131313;
@@ -13,6 +13,7 @@
 
     --font-1:'Lexend Deca', sans-serif;
     --font-2: 'Montserrat', sans-serif;
+    --font-3: 'Raleway', sans-serif;
 }
 
 body{
@@ -180,6 +181,68 @@ section.mainGallery .container a{
     text-align: center;
     padding-top: 4rem;
 }
+
+section.about .container .info{
+    display: flex;
+    padding: 1rem 0 0;
+    align-items: center;
+}
+section.about .container .info .photo,
+section.about .container .info .info__text{
+    flex: 1;
+}
+section.about .container .info .photo{
+    margin-right: 2rem;
+    max-height: 35rem;
+    overflow: hidden;
+    border-radius: 10px;
+}
+section.about .container .info .info__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-2);
+}
+section.about .container .info .info__text .info__title{
+    font-family: var(--font-2);
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+section.about .container .info .info__text .text{
+    font-size: 1.5rem;
+}
+
+section.goals{
+    background-color: #6A68D3;
+    margin-top: 3rem;
+}
+section.goals .container{
+    display: flex;
+    justify-content: center;
+}
+section.goals .container .goal{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-2);
+    font-family: var(--font-2);
+    padding: 1rem 0;
+}
+section.goals .container .goal h3{
+    font-size: 3rem;
+    margin: 0;
+}
+section.goals .container .goal p{
+    font-size: 2rem;
+    margin: 0;
+}
+
+section.services{
+    margin-bottom: 2rem;
+}
 section.services .container .desc{
     font-family: var(--font-2);
     font-weight: 400;
@@ -281,12 +344,18 @@ section.services .container .myServices .otherServices{
     grid-template-rows: repeat(2,1fr);
     grid-gap: .5rem;
 }
-section.services .container .myServices .otherServices .service{
-    background-color: grey;
-}
 
+section.mainGallery {
+    background-color: var(--color-7);
+    padding-bottom: 2rem;
+}
 section.mainGallery .container{
     position: relative;
+}
+section.mainGallery .container .title{
+    color: var(--color-2);
+    margin: 2rem 0;
+    padding: 1rem 0 0;
 }
 section.mainGallery .container .gallerySliderBlock{
     height: 35rem;
@@ -343,7 +412,7 @@ section.mainGallery .container .btns{
 }
 section.mainGallery .container .btns button{
     font-weight: 200;
-    color: var(--color-1);
+    color: var(--color-2);
     background: none;
     font-size: 7rem;
     border: none;
@@ -358,11 +427,11 @@ section.mainGallery .container .btns button.next{
 section.mainGallery .container .btns button.prev:hover{
     transform: translate(-1rem,0);   
 }
-section.mainGallery .container .btns button.next:hover{
+section.mainGallery .container .btns button.next:hover{ 
     transform: translate(1rem,0);   
 }
 section.mainGallery .container .btns button.disable{
-    color: #d2d2d2;
+    color: #5c5c5c;
 }
 section.mainGallery .container .btns button.disable:hover{
     transform: translate(0); 
@@ -378,6 +447,71 @@ section.mainGallery .container a{
 }
 section.mainGallery .container a:hover{
     transform: translate(calc(-50% + .2rem),-.2rem);
+}
+
+section.contacts .container{
+    display: flex;
+    padding: 2rem 0;
+}
+section.contacts .container .name{
+    font-size: 2rem;
+    font-family: var(--font-2);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+section.contacts .container .info,
+section.contacts .container .map{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+section.contacts .container .info{
+    margin-right: 2rem;
+}
+section.contacts .container .info ul.contacts,
+section.contacts .container .info ul.hours{
+    padding: 0;
+}
+section.contacts .container .info ul.hours{
+    margin-top: 2rem;
+}
+section.contacts .container .info ul.contacts li:not(:first-child),
+section.contacts .container .info ul.hours li:not(:first-child){
+    margin-top: 1rem;
+}
+section.contacts .container .info ul.contacts li{
+    display: flex;
+    align-items: center;
+}
+section.contacts .container .info ul.contacts li img,
+section.contacts .container .info ul.hours li img{
+    width: 2rem;
+    margin-right: 1rem;
+}
+section.contacts .container .info ul.contacts li a,
+section.contacts .container .info ul.contacts li p,
+section.contacts .container .info ul.hours li{
+    color: var(--color-7);
+    text-decoration: none;
+    font-family: var(--font-2);
+    font-size: 1.2rem;
+    transition: all .4s ease;
+    margin: 0;
+}
+section.contacts .container .info ul.contacts li a:hover{
+    margin-left: .5rem;
+}
+
+section.contacts .container .info ul.hours li:not(:first-child) img{
+    opacity: 0;
+    visibility: hidden;
+}
+section.contacts .container .map__block{
+    flex: 1 1 auto;
+}
+section.contacts .container .map iframe{
+    width: 100%;
+    height: 100%;
 }
 
 section.moreServices{
@@ -1015,58 +1149,86 @@ footer .container{
     padding: 2rem 0;
 }
 footer .container .info,
-footer .container .map{
+footer .container .contact,
+footer .container .work,
+footer .container .menu{
     flex: 1;
-}
-footer .container .info{
-    margin-right: 2rem;
+    padding: 0 1.5rem;
+    color: var(--color-2);
+    /* border-right: .05px solid #414141; */
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
-footer .container .info a.logo{
-    text-align: center;
+footer .container .head{
+    font-family: var(--font-3);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-bottom: .3rem;
+    border-bottom: .25rem solid var(--color-4);
+    margin: 0;
 }
-footer .container .info a.logo img{
+footer .container ul{
+    padding: 0;
+    border-top: .05rem solid #414141;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+footer .container .menu{
+    padding: 0 0 0 1.5rem;
+    border: none;
+}
+footer .container .info{
+    padding: 0 1.5rem 0 0;
+}
+footer .container .info .logo{
+    margin-bottom: 1rem;
+}
+footer .container .info .text{
+    font-family: var(--font-2);
+    font-size: .9rem;
+}
+footer .container .info .logo img{
     border-radius: 10px;
 }
-footer .container .info ul.contacts,
-footer .container .info ul.hours{
-    padding: 0;
-    margin-top: 2rem;
-}
-footer .container .info ul.contacts li:not(:first-child),
-footer .container .info ul.hours li:not(:first-child){
-    margin-top: 1rem;
-}
-footer .container .info ul.contacts li{
+footer .container .contact ul.body li{
+    margin-top: .6rem;
     display: flex;
     align-items: center;
 }
-footer .container .info ul.contacts li img,
-footer .container .info ul.hours li img{
-    width: 2rem;
-    margin-right: 1rem;
-}
-footer .container .info ul.contacts li a,
-footer .container .info ul.contacts li p,
-footer .container .info ul.hours li{
+footer .container .contact ul.body li a,
+footer .container .contact ul.body li p{
     color: var(--color-2);
     text-decoration: none;
-    font-family: var(--font-2);
-    font-size: 1.2rem;
-    transition: all .4s ease;
-    margin: 0;
+    margin: 0 0 0   .5rem;
+    transition: all .7s ease;
+    font-size: 1rem;
 }
-footer .container .info ul.contacts li a:hover{
-    margin-left: .5rem;
+footer .container .contact ul.body li a:hover{
+    margin-left: 1rem;
 }
-
-footer .container .info ul.hours li:not(:first-child) img{
-    opacity: 0;
-    visibility: hidden;
+footer .container .contact ul.body li img{
+    width: 2rem;
 }
-
-footer .container .map iframe{
-    width: 100%;
-    height: 100%;
+footer .container .work ul.body li{
+    margin-top: .5rem;
+}
+footer .container .menu ul.body{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+footer .container .menu ul.body li{
+    margin-top: .5rem;
+    display: flex;
+}
+footer .container .menu ul.body li a{
+    color: var(--color-2);
+    flex: 1 1 auto;
+    text-decoration: none;
+    transition: all .7s ease;
+}
+footer .container .menu ul.body li a:hover{
+    transform: translate(.2rem,-.2rem);
 }
