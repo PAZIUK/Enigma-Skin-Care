@@ -78,13 +78,13 @@
         <div class="container">
             <h2 class="title">OUR GALLERY</h2>
             <div class="gallerySliderBlock">
-                <div class="slide active" slide="1">
+                <div class="slide" slide="1">
                     <img src="img/gallery/1.jpg" alt="">
                 </div>
                 <div class="slide" slide="2">
                     <img src="img/gallery/1.jpg" alt="">
                 </div>
-                <div class="slide" slide="3">
+                <div class="slide active" slide="3">
                     <img src="img/gallery/2.jpg" alt="">
                 </div>
                 <div class="slide" slide="4">
