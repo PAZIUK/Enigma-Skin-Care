@@ -21,6 +21,8 @@ body{
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
 }
 
 main{
@@ -214,7 +216,8 @@ section.about .container .info .info__text .text{
 }
 
 section.goals{
-    background-color: #6A68D3;
+    background-image: url("../img/blue.jpg");
+    background-size: cover;
     margin-top: 3rem;
 }
 section.goals .container{
@@ -346,14 +349,14 @@ section.services .container .myServices .otherServices{
 }
 
 section.mainGallery {
-    background-color: var(--color-7);
+    background-color: #dee2e6;
     padding-bottom: 2rem;
 }
 section.mainGallery .container{
     position: relative;
 }
 section.mainGallery .container .title{
-    color: var(--color-2);
+    color: var(--color-1);
     margin: 2rem 0;
     padding: 1rem 0 0;
 }
@@ -412,7 +415,7 @@ section.mainGallery .container .btns{
 }
 section.mainGallery .container .btns button{
     font-weight: 200;
-    color: var(--color-2);
+    color: var(--color-1);
     background: none;
     font-size: 7rem;
     border: none;
