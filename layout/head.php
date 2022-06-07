@@ -8,16 +8,16 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
         
-        <title>Enigma Skin Care</title>
+        <title>Enigma Med Spa</title>
 
-        <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
         <link rel="manifest" href="img/favicons/site.webmanifest">
-        <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#f37800">
-        <meta name="msapplication-TileColor" content="#ffffff">
+        <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#9ae8e6">
+        <meta name="msapplication-TileColor" content="#9ae8e6">
         <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
-        <meta name="theme-color" content="#ffffff"> -->
+        <meta name="theme-color" content="#ffffff">
 
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 

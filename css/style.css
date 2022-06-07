@@ -23,6 +23,7 @@ body{
     flex-direction: column;
     background-image: url("../img/bg.jpg");
     background-size: cover;
+    min-height: 100vh;
 }
 
 main{
@@ -524,6 +525,9 @@ section.moreServices .container,
 section.moreServices .container .service_row{
     display: flex;
     flex-direction: column;
+}
+section.moreServices .container .photo img{
+    width: 100%;
 }
 section.moreServices .topic{
     background-image: url("../img/services/topic.webp");
