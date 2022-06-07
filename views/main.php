@@ -45,60 +45,60 @@
             <div class="myServices">
                 <div class="mainService">
                     <div class="service">
-                        <img src="img/services/main.jpg" alt="All Services">
+                        <img src="img/services/all.jpg" alt="All Services">
                         <div class="name"><p>All Services</p></div>
                         <div class="service__block">
-                            <a href="index.php?action=services&view=anti-aging">Anti-Aging</a>
-                            <a href="index.php?action=services&view=brightening">Brightening</a>
-                            <a href="index.php?action=services&view=acne">Acne</a>
-                            <a href="index.php?action=services&view=hair-solutions">Hair Solutions</a>
+                            <a href="index.php?action=services&view=anti-aging">Skin Care Services</a>
+                            <a href="index.php?action=services&view=brightening">Laser hair removal</a>
+                            <a href="index.php?action=services&view=acne">BBL Treatment</a>
+                            <a href="index.php?action=services&view=hair-solutions">Massage Therapy</a>
                             <a href="index.php?action=services" class="main">All Services</a>
                         </div>
                     </div>
                 </div>
                 <div class="otherServices">
                     <div class="service">
-                        <img src="img/services/1.webp" alt="Service" style="top:-35%;">
-                        <div class="name"><p>Anti-Aging</p></div>
+                        <img src="img/services/1.jpeg" alt="Service" style="top:-35%;">
+                        <div class="name"><p>Skin Care Services</p></div>
                         <div class="service__block">
                             <a href="index.php?action=services">All Services</a>
-                            <a href="index.php?action=services&view=brightening">Brightening</a>
-                            <a href="index.php?action=services&view=acne">Acne</a>
-                            <a href="index.php?action=services&view=hair-solutions">Hair Solutions</a>
-                            <a href="index.php?action=services&view=anti-aging" class="main">Anti-Aging</a>
+                            <a href="index.php?action=services&view=brightening">Laser hair removal</a>
+                            <a href="index.php?action=services&view=acne">BBL Treatment</a>
+                            <a href="index.php?action=services&view=hair-solutions">Massage Therapy</a>
+                            <a href="index.php?action=services&view=anti-aging" class="main">Skin Care Services</a>
                         </div>
                     </div>
                     <div class="service">
-                        <img src="img/services/2.webp" alt="Service" style="top:-5%;">
-                        <div class="name"><p>Brightening</p></div>
+                        <img src="img/services/2.png" alt="Service" style="top:-5%;">
+                        <div class="name"><p>Laser hair removal</p></div>
                         <div class="service__block">
                             <a href="index.php?action=services">All Services</a>
-                            <a href="index.php?action=services&view=anti-aging">Anti-Aging</a>
-                            <a href="index.php?action=services&view=acne">Acne</a>
-                            <a href="index.php?action=services&view=hair-solutions">Hair Solutions</a>
-                            <a href="index.php?action=services&view=brightening" class="main">Brightening</a>
+                            <a href="index.php?action=services&view=anti-aging">Skin Care Services</a>
+                            <a href="index.php?action=services&view=acne">BBL Treatment</a>
+                            <a href="index.php?action=services&view=hair-solutions">Massage Therapy</a>
+                            <a href="index.php?action=services&view=brightening" class="main">Laser hair removal</a>
                         </div>
                     </div>
                     <div class="service">
-                        <img src="img/services/3.webp" alt="Service">
-                        <div class="name"><p>Acne</p></div>
+                        <img src="img/services/3.jpg" alt="Service">
+                        <div class="name"><p>BBL Treatment</p></div>
                         <div class="service__block">
                             <a href="index.php?action=services">All Services</a>
-                            <a href="index.php?action=services&view=brightening">Brightening</a>
-                            <a href="index.php?action=services&view=anti-aging">Anti-Aging</a>
-                            <a href="index.php?action=services&view=hair-solutions">Hair Solutions</a>
-                            <a href="index.php?action=services&view=acne" class="main">Acne</a>
+                            <a href="index.php?action=services&view=brightening">Laser hair removal</a>
+                            <a href="index.php?action=services&view=anti-aging">Skin Care Services</a>
+                            <a href="index.php?action=services&view=hair-solutions">Massage Therapy</a>
+                            <a href="index.php?action=services&view=acne" class="main">BBL Treatment</a>
                         </div>
                     </div>
                     <div class="service">
-                        <img src="img/services/4.webp" alt="Service" style="top:-35%;">
-                        <div class="name"><p>Hair Solutions</p></div>
+                        <img src="img/services/4.jpg" alt="Service" style="top:-35%;">
+                        <div class="name"><p>Massage Therapy</p></div>
                         <div class="service__block">
                             <a href="index.php?action=services">All Services</a>
-                            <a href="index.php?action=services&view=brightening">Brightening</a>
-                            <a href="index.php?action=services&view=acne">Acne</a>
-                            <a href="index.php?action=services&view=anti-aging">Anti-Aging</a>
-                            <a href="index.php?action=services&view=hair-solutions" class="main">Hair Solutions</a>
+                            <a href="index.php?action=services&view=brightening">Laser hair removal</a>
+                            <a href="index.php?action=services&view=acne">BBL Treatment</a>
+                            <a href="index.php?action=services&view=anti-aging">Massage Therapy</a>
+                            <a href="index.php?action=services&view=hair-solutions" class="main">Massage Therapy</a>
                         </div>
                     </div>
                 </div>

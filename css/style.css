@@ -339,6 +339,7 @@ section.services .container .myServices .mainService .service{
 }
 section.services .container .myServices .mainService .service img{
     top: -20%;
+
 }
 section.services .container .myServices .otherServices{
     flex: 2;

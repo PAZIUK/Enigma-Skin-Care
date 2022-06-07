@@ -3,7 +3,7 @@
         <div class="container">
             <div class="info">
                 <div class="logo">
-                    <img src="img/Enigma_Logo.png" alt="TOP Masonry&amp;Tuckpointing">
+                    <img src="img/Enigma_logo1.png" alt="TOP Masonry&amp;Tuckpointing">
                 </div>
                 <div class="text"><?php echo CONFIG::getDescription()?></div>
             </div>
