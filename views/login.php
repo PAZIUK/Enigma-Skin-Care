@@ -14,7 +14,7 @@
                 $password = $_POST['password'];
                 $passwordBD = $user["Password"];
                 if(password_verify($password, $passwordBD)==true){
-                    $_SESSION["ID"] = $user["id"];
+                    $_SESSION["ID"] = $user["ID"];
                     $_SESSION["USERNAME"] = $user["username"];
                     if (intval($user["isAdmin"]) == 1) {
                         $_SESSION["isAdmin"] = true;

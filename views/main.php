@@ -48,10 +48,10 @@
                         <img src="img/services/all.jpg" alt="All Services">
                         <div class="name"><p>All Services</p></div>
                         <div class="service__block">
-                            <a href="index.php?action=services&view=anti-aging">Skin Care Services</a>
-                            <a href="index.php?action=services&view=brightening">Laser hair removal</a>
-                            <a href="index.php?action=services&view=acne">BBL Treatment</a>
-                            <a href="index.php?action=services&view=hair-solutions">Massage Therapy</a>
+                            <a href="index.php?action=services&view=skin-care-services">Skin Care Services</a>
+                            <a href="index.php?action=services&view=laser-hair-removal">Laser Hair Removal</a>
+                            <a href="index.php?action=services&view=bbl-treatment">BBL Treatment</a>
+                            <a href="index.php?action=services&view=massage-therapy">Massage Therapy</a>
                             <a href="index.php?action=services" class="main">All Services</a>
                         </div>
                     </div>
@@ -62,21 +62,21 @@
                         <div class="name"><p>Skin Care Services</p></div>
                         <div class="service__block">
                             <a href="index.php?action=services">All Services</a>
-                            <a href="index.php?action=services&view=brightening">Laser hair removal</a>
-                            <a href="index.php?action=services&view=acne">BBL Treatment</a>
-                            <a href="index.php?action=services&view=hair-solutions">Massage Therapy</a>
-                            <a href="index.php?action=services&view=anti-aging" class="main">Skin Care Services</a>
+                            <a href="index.php?action=services&view=laser-hair-removal">Laser Hair Removal</a>
+                            <a href="index.php?action=services&view=bbl-treatment">BBL Treatment</a>
+                            <a href="index.php?action=services&view=massage-therapy">Massage Therapy</a>
+                            <a href="index.php?action=services&view=skin-care-services" class="main">Skin Care Services</a>
                         </div>
                     </div>
                     <div class="service">
                         <img src="img/services/2.png" alt="Service" style="top:-5%;">
-                        <div class="name"><p>Laser hair removal</p></div>
+                        <div class="name"><p>Laser Hair Removal</p></div>
                         <div class="service__block">
                             <a href="index.php?action=services">All Services</a>
-                            <a href="index.php?action=services&view=anti-aging">Skin Care Services</a>
-                            <a href="index.php?action=services&view=acne">BBL Treatment</a>
-                            <a href="index.php?action=services&view=hair-solutions">Massage Therapy</a>
-                            <a href="index.php?action=services&view=brightening" class="main">Laser hair removal</a>
+                            <a href="index.php?action=services&view=skin-care-services">Skin Care Services</a>
+                            <a href="index.php?action=services&view=bbl-treatment">BBL Treatment</a>
+                            <a href="index.php?action=services&view=massage-therapy">Massage Therapy</a>
+                            <a href="index.php?action=services&view=laser-hair-removal" class="main">Laser Hair Removal</a>
                         </div>
                     </div>
                     <div class="service">
@@ -84,10 +84,10 @@
                         <div class="name"><p>BBL Treatment</p></div>
                         <div class="service__block">
                             <a href="index.php?action=services">All Services</a>
-                            <a href="index.php?action=services&view=brightening">Laser hair removal</a>
-                            <a href="index.php?action=services&view=anti-aging">Skin Care Services</a>
-                            <a href="index.php?action=services&view=hair-solutions">Massage Therapy</a>
-                            <a href="index.php?action=services&view=acne" class="main">BBL Treatment</a>
+                            <a href="index.php?action=services&view=skin-care-services">Skin Care Services</a>
+                            <a href="index.php?action=services&view=laser-hair-removal">Laser Hair Removal</a>
+                            <a href="index.php?action=services&view=massage-therapy">Massage Therapy</a>
+                            <a href="index.php?action=services&view=bbl-treatment" class="main">BBL Treatment</a>
                         </div>
                     </div>
                     <div class="service">
@@ -95,10 +95,10 @@
                         <div class="name"><p>Massage Therapy</p></div>
                         <div class="service__block">
                             <a href="index.php?action=services">All Services</a>
-                            <a href="index.php?action=services&view=brightening">Laser hair removal</a>
-                            <a href="index.php?action=services&view=acne">BBL Treatment</a>
-                            <a href="index.php?action=services&view=anti-aging">Massage Therapy</a>
-                            <a href="index.php?action=services&view=hair-solutions" class="main">Massage Therapy</a>
+                            <a href="index.php?action=services&view=skin-care-services">Skin Care Services</a>
+                            <a href="index.php?action=services&view=laser-hair-removal">Laser Hair Removal</a>
+                            <a href="index.php?action=services&view=bbl-treatment">BBL Treatment</a>
+                            <a href="index.php?action=services&view=massage-therapy" class="main">Massage Therapy</a>
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                 <div class="slide" slide="2">
                     <img src="img/gallery/1.jpg" alt="">
                 </div>
-                <div class="slide active" slide="3">
+                <div class="slide" slide="3">
                     <img src="img/gallery/2.jpg" alt="">
                 </div>
                 <div class="slide active" slide="4">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2022 at 10:11 PM
+-- Generation Time: Jun 07, 2022 at 11:37 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -68,8 +68,8 @@ INSERT INTO `config` (`config_id`, `config_key`, `config_value`, `config_timeAdd
 (4, 'location', '575 Lincoln Ave, Winnetka, IL 60093, USA', '2022-05-26 22:49:06'),
 (5, 'mail', 'Dterlian2@gmail.com', '2022-05-26 22:50:10'),
 (6, 'facebook', 'https://www.facebook.com', '2022-05-26 22:52:39'),
-(7, 'instagram', 'https://www.instagram.com', '2022-05-26 22:53:10'),
-(8, 'siteDescription', 'Enigma skin care offers the full spectrum of innovative, age-reversing treatments geared to rejuvenateyour complexion and replenish lost stores of collagen and elastin, restoring youthfulness and joie de vivre in the process!', '2022-05-26 22:56:15');
+(7, 'instagram', 'https://www.instagram.com/enigma_chicago_medspa/', '2022-05-26 22:53:10'),
+(8, 'siteDescription', 'Enigma skin care offers the full spectrum of innovative, age-reversing treatments geared to rejuvenate your complexion and replenish lost stores of collagen and elastin, restoring youthfulness and joie de vivre in the process!', '2022-05-26 22:56:15');
 
 -- --------------------------------------------------------
 

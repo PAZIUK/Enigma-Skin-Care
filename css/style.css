@@ -244,7 +244,7 @@ section.goals .container .goal p{
 }
 
 section.services{
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 section.services .container .desc{
     font-family: var(--font-2);
@@ -338,7 +338,8 @@ section.services .container .myServices .mainService .service{
     background-color: grey;
 }
 section.services .container .myServices .mainService .service img{
-    top: -20%;
+    width: unset;
+    height: 100%;
 
 }
 section.services .container .myServices .otherServices{
@@ -351,7 +352,7 @@ section.services .container .myServices .otherServices{
 
 section.mainGallery {
     background-color: #dee2e6;
-    padding-bottom: 2rem;
+    padding: .1rem 0 2rem;
 }
 section.mainGallery .container{
     position: relative;
@@ -455,7 +456,7 @@ section.mainGallery .container a:hover{
 
 section.contacts .container{
     display: flex;
-    padding: 2rem 0;
+    padding: 4rem 0 2rem;
 }
 section.contacts .container .name{
     font-size: 2rem;
@@ -518,7 +519,9 @@ section.contacts .container .map iframe{
     height: 100%;
 }
 
-section.moreServices{
+section.moreServices,
+section.moreServices .container,
+section.moreServices .container .service_row{
     display: flex;
     flex-direction: column;
 }
@@ -534,33 +537,67 @@ section.moreServices .topic .container{
 section.moreServices .topic .container .title{
     font-size: 3rem;
     color: var(--color-2);
-    font-family: var(--font-1);
+    font-weight: 600;
+    font-family: var(--font-2);
+    letter-spacing: 1px;
     padding: 5rem 0;
     text-align: center;
 }
-section.moreServices .container .services{
+section.moreServices .container .service_row:last-child{
+    margin-bottom: 3rem;
+}
+section.moreServices .container .service_row .service_title{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--font-1);
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+}
+section.moreServices .container .service_row .services{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 2rem;
-    padding-top: 5rem;
+    grid-gap: 1.5rem;
 }
-section.moreServices .container .services .service .photo img{
+section.moreServices .container .service_row .services.mt{
+    padding-top: 2rem;
+}
+section.moreServices .container .service_row .services .service{
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+section.moreServices .container .service_row .services .service .price_row{
+    display: flex;
+    justify-content: space-between;
     width: 100%;
 }
-section.moreServices .container .services .service .info{
+section.moreServices .container .service_row .services .service .price_row:not(:first-child){
+    margin-top: .5rem;
+}
+section.moreServices .container .service_row .services .service .price_row .name{
+    font-family: var(--font-2);
+    font-size: 1.1rem;
+    font-weight: 500;
     display: flex;
+    align-items: center;
+    color: #9f8b6b;
 }
-section.moreServices .container .services .service .info a{
-    text-align: center;
-    padding: 1.5rem;
-    text-decoration: none;
-    color: var(--color-2);
-    background-color: #ff8a3d;
-    transition: all .7s ease;
-    flex: 1 1 auto;
-}
-section.moreServices .container .services .service .info a:hover{
-    background-color: #ecc826;
+section.moreServices .container .service_row .services .service .price_row .price{
+    font-family: var(--font-1);
+    font-size: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #9f8b6b;
+    font-size: 1.2rem;
 }
 
 section.appointment .appointment__block{

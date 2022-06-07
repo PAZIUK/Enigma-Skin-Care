@@ -34,12 +34,11 @@
             <div class="menu">
                 <h3 class="head">MENU</h3>
                 <ul class="body">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li> 
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="info.html">Info</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php#about">About Us</a></li>
+                    <li><a href="index.php?action=services">Services</a></li>
+                    <li><a href="index.php#contacts">Locations</a></li>
+                    <li><a href="index.php#contacts">Contact Us</a></li>
                 </ul>
             </div>
         </div>
