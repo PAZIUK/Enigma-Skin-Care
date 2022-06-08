@@ -15,9 +15,9 @@
                     <img src="img/gallery/1.jpg" alt="Woman">
                 </div>
                 <div class="info__text">
-                    <h2 class="info__title">Dr Diana</h2>
-                    <p class="text">Dr. Michelle Lee is a Harvard trained and board-certified plastic surgeon with expertise in nonsurgical and surgical aesthetic procedures for the face and breast. Her path to plastic surgery began with art. As a concert pianist, Dr. Lee’s decade-long performance career refined her artistic approach to aesthetics.</p>
-                    <p class="text">Dr. Lee obtained her medical degree from the University of Pennsylvania on a merit scholarship. She pursued a rigorous six-year residency in plastic surgery at Case Western Reserve University and a dedicated fellowship in aesthetic and reconstructive breast surgery at Harvard.</p>
+                    <h2 class="info__title">“I INVITE YOU TO ENJOY THE ENIGMA MEDICAL SPA DESIGN EXPERIENCE THAT WE CREATED FOR LIKE-MINDED BEAUTY PROFESSIONALS WHO SHARE OUR PASSION FOR DESIGN, QUALITY, STYLE AND MADE IN THE USA.”</>
+                    <p class="text">Doctor Diana</p>
+                    
                 </div>
             </div>
         </div>

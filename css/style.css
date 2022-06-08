@@ -530,7 +530,7 @@ section.moreServices .container .photo img{
     width: 100%;
 }
 section.moreServices .topic{
-    background-image: url("../img/services/topic.webp");
+    background-image: url("../img/services/topic.jpg");
     background-size: cover;
     background-position: center;
 }
