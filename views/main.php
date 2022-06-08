@@ -40,7 +40,7 @@
     </section>
     <section class="services" id="services">
         <div class="container">
-            <h2 class="title">- OUR SERVICES -</h2>
+            <h2 class="title">- Our Services -</h2>
             <h3 class="desc"><?php echo CONFIG::getDescription()?></h3>
             <div class="myServices">
                 <div class="mainService">
@@ -107,7 +107,7 @@
     </section>
     <section class="mainGallery">
         <div class="container">
-            <h2 class="title">- OUR GALLERY -</h2>
+            <h2 class="title">- Our Gallery -</h2>
             <div class="gallerySliderBlock">
                 <div class="slide" slide="1">
                     <img src="img/gallery/1.jpg" alt="">

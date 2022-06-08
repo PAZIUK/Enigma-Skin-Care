@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;700&family=Gentium+Plus:wght@400;700&family=Raleway:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root{
     --color-1: #131313;
@@ -14,6 +14,7 @@
     --font-1:'Lexend Deca', sans-serif;
     --font-2: 'Montserrat', sans-serif;
     --font-3: 'Raleway', sans-serif;
+    --font-4: 'Gentium Plus', serif;
 }
 
 body{
@@ -196,24 +197,32 @@ section.about .container .info .info__text{
 }
 section.about .container .info .photo{
     margin-right: 2rem;
-    max-height: 35rem;
+    min-height: 25rem;
     overflow: hidden;
     border-radius: 10px;
+    position: relative;
+}
+section.about .container .info .photo img{
+    position: absolute;
+    top: -10rem;
+    left: 0;
+    width: 100%;
 }
 section.about .container .info .info__text{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: var(--font-2);
 }
 section.about .container .info .info__text .info__title{
-    font-family: var(--font-2);
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
+    font-family: var(--font-4);
+    font-size: 2.5rem;
+    font-weight: 400;
 }
 section.about .container .info .info__text .text{
     font-size: 1.5rem;
+    text-align: end;
+    margin: 3rem 0 0;
+    font-weight: 600;
 }
 
 section.goals{
@@ -566,21 +575,35 @@ section.moreServices .container .service_row .services.mt{
     padding-top: 2rem;
 }
 section.moreServices .container .service_row .services .service{
-    border-radius: 5px;
     width: 100%;
     background-color: #fff;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    overflow: hidden;
+    justify-content: space-between;
     -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
     -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
     box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    border-radius: 5px;
 }
 section.moreServices .container .service_row .services .service .price_row{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 0 1rem 1rem;
+}
+section.moreServices .container .service_row .services .service .photo_row{
+    margin-bottom: .5rem;
+    position: relative;
+    min-height: 13rem;
+    /* border-bottom: .1rem solid var(--color-4); */
+    width: 100%;
+    overflow: hidden;
+}
+section.moreServices .container .service_row .services .service .photo_row img{
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 section.moreServices .container .service_row .services .service .price_row:not(:first-child){
     margin-top: .5rem;
@@ -699,6 +722,105 @@ section.appointment .appointment__block .appointmentForm form button{
     font-size: 1.4rem;
     letter-spacing: 1px;
     font-family: var(--font-2);
+}
+
+section.team .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+section.team .container .title{
+    font-size: 4rem;
+    color: var(--color-1);
+    padding-top: 1rem;
+    font-family: var(--font-1);
+}
+section.team .container .subtitle{
+    font-size: 1.4rem;
+    color: #9f8b6b;
+    font-family: var(--font-2);
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+section.team .container .line{
+    width: 5rem;
+    height: .3rem;
+    border-radius: 30px;
+    background-color: var(--color-4);
+}
+section.team .container .teammates{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1.5rem
+}
+section.team .container .teammates .teammate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: .2rem solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    padding: 0 0 1rem;
+}
+section.team .container .teammates .teammate .photo{
+    display: flex;
+    position: relative;
+    min-height: 18rem;
+    width: 100%;
+    overflow: hidden;
+}
+section.team .container .teammates .teammate .photo::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    border: 2rem solid #fff;
+    border-left-color: transparent;
+    border-top-color: transparent;  
+    bottom: 0;
+}
+section.team .container .teammates .teammate .photo img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+}
+section.team .container .teammates .teammate .name{
+    font-family: var(--font-3);
+    font-weight: 500;
+    margin: 0;
+    padding: 0 1.5rem;
+}
+section.team .container .teammates .teammate .line{
+    margin: 1.5rem 0;
+}
+section.team .container .teammates .teammate .desc{
+    margin: 0;
+    text-align: center;
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+}
+section.team .container .teammates .teammate .media{
+    display: flex;
+    padding: 0 1.5rem;
+}
+section.team .container .teammates .teammate .media a{
+    text-decoration: none;
+    transition: all .5s ease;
+}
+section.team .container .teammates .teammate .media a:not(:first-child){
+    margin-left: .5rem;
+}
+section.team .container .teammates .teammate .media a:hover{
+    transform: translate(0,-.2rem);
+}
+section.team .container .teammates .teammate .media a img{
+    width: 2rem;
 }
 
 main.message{
@@ -930,7 +1052,10 @@ main#admin aside ul.actions{
     flex-direction: column;
     justify-content: flex-start;
 }
-main#admin .buttn i{
+main#admin aside ul.actions li{
+    display: flex ;
+}
+main#admin .buttn img{
     top: 50%;
     transform: translate(0,-50%);
     left: 1rem;
@@ -1002,6 +1127,9 @@ main#admin section.content table thead tr td{
 main#admin section.content table tr td{
     border-bottom: none;
 }
+main#admin section.content table tr td.act{
+    display: flex;
+}
 main#admin section.content table tr td a{
     text-decoration: none;
     border-radius: 10px;
@@ -1011,6 +1139,13 @@ main#admin section.content table tr td a{
 main#admin section.content table tr td a,
 main#admin section.content table tr td button{
     transition: all .4s ease;
+}
+main#admin section.content table tr td a.view{
+    padding: 0;
+    margin-right: 1rem;
+}
+main#admin section.content table tr td a.view:hover{
+    background: none;
 }
 main#admin section.content table tr td button{
     border: .05rem solid #e4e4e4;
@@ -1027,7 +1162,8 @@ main#admin section.content form#personalSettings a.passwordRecoveryOpen:hover{
     transform: translate(0,-.2rem);
 }
 main#admin section.content table tr td a:hover,
-main#admin section.content form#personalSettings a.passwordRecoveryOpen:hover{
+main#admin section.content form#personalSettings a.passwordRecoveryOpen:hover,
+main#admin section.content .applicationAbout .applicationAbout__row a:hover{
     background-color: var(--color-5);
     color: var(--color-2);
 }
@@ -1036,6 +1172,38 @@ main#admin section.content table tr td button:hover img{
 }
 main#admin section.content table tr td img{
     width: 1.5rem;
+}
+main#admin section.content .paginationBtns{
+    margin-top: 3rem;
+    background-color: var(--color-3);
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+main#admin section.content .paginationBtns button{
+    color: var(--color-1);
+    padding: .5rem 1rem;
+    font-family: var(--font-4);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .5s ease;
+    border: none;
+    background-color: var(--color-2);
+}
+main#admin section.content .paginationBtns button.noactive,
+main#admin section.content .paginationBtns button.noactive:hover{
+    background-color: #ddd;
+}
+main#admin section.content .paginationBtns button.noactive:hover{
+    cursor: default;
+    color: var(--color-1);
+}
+main#admin section.content .paginationBtns button:hover{
+    background-color: var(--color-1);
+    color: var(--color-2);
+}
+main#admin section.content .paginationBtns button:not(:first-child){
+    border-left: .05rem solid #dddddd;
 }
 main#admin section.content form#settingsForm,
 main#admin section.content form#personalSettings{
@@ -1184,6 +1352,60 @@ main#admin section.content .content__block__child textarea{
     min-height: 10rem;
     text-align: left;
     padding: 1rem;
+}
+main#admin section.content .applicationAbout{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+main#admin section.content .applicationAbout .applicationAbout__row{
+    margin-top: 1rem;
+    background-color: var(--color-2);
+    color: var(--color-1);
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem .5rem .5rem 1rem;
+    border-radius: 10px;
+    align-items: flex-start;
+}
+main#admin section.content .applicationAbout .applicationAbout__row p,
+main#admin section.content .applicationAbout .applicationAbout__row a{
+    margin: 0;
+    font-family: var(--font-1);
+    font-size: 1.2rem;
+}
+main#admin section.content .applicationAbout .applicationAbout__row a{
+    text-decoration: none;
+    padding: .5rem;
+    border-radius: 10px;
+    transition: all .5s ease;
+    color: var(--color-5);
+}
+main#admin section.content .applicationAbout .applicationAbout__row p:first-child{
+    font-weight: 700;
+}
+main#admin section.content .applicationAbout .applicationAbout__row p:last-child{
+    margin: 0 .5rem 0 2rem;
+    max-width: 75%;
+    overflow-wrap: anywhere;
+}
+main#admin section.content .applicationAbout .applicationAbout__row.submit{
+    justify-content: center;
+    background: none;
+    padding: 0;
+}
+main#admin section.content .applicationAbout .applicationAbout__row.submit img{
+    width: 3rem;
+}
+main#admin section.content .applicationAbout .applicationAbout__row.submit button{
+    padding: .5rem 2rem;
+    color: var(--color-2);
+    background-color: #54e03f;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: var(--font-1);
+    font-size: 1.2rem;
+    border: none;
 }
 
 footer{

@@ -1,9 +1,17 @@
 <?php 
 	class ADMIN
 	{
-		public static function getAppointments(){
+		public static function getAppointments($start,$end){
 			$mysqli = DATABASE::Connect();
-			$sql = "SELECT * FROM `appointment` ORDER BY `appointment`.`App_Checked` ASC, `appointment`.`App_DateTime` DESC";
+			$sql = "SELECT * FROM `appointment` ORDER BY `appointment`.`App_Checked` ASC, `appointment`.`App_DateTime` DESC LIMIT ?,?";
+			$stmt = $mysqli->prepare($sql);
+			$stmt->bind_param("ii",$start,$end);
+			$stmt->execute();
+			return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+		}
+		public static function getAppointmentById($id){
+			$mysqli = DATABASE::Connect();
+			$sql = "SELECT * FROM `appointment` WHERE `appointment`.`App_ID` = $id";
 			$stmt = $mysqli->prepare($sql);
 			$stmt->execute();
 			return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -14,6 +22,13 @@
 			$stmt = $mysqli->prepare($sql);
 			$stmt->bind_param("i",$id);
 			$stmt->execute();
+		}
+		public static function getAllAppointments(){
+			$mysqli = DATABASE::Connect();
+			$sql = "SELECT * FROM `appointment`";
+			$stmt = $mysqli->prepare($sql);
+			$stmt->execute();
+			return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 		}
 		public static function GetSettings(){
 			$mysqli = DATABASE::Connect();

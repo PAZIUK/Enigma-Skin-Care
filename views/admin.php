@@ -1,5 +1,8 @@
 <?php
     if (isset($_SESSION["isAdmin"])&&$_SESSION["isAdmin"]==true){
+        if(isset($_GET["view"])&&$_GET["view"]=="appointments"){
+            $_POST["action"]="appointments";
+        }
         ?>
         <main id="admin">
             <div class="container">
@@ -18,7 +21,7 @@
                     if(!empty($_POST)){
                         if(isset($_POST["action"])){
                             if($_POST["action"]=="appointments"){
-                                if($_POST["isCheck"]=="true"){
+                                if(isset($_POST["isCheck"])&&$_POST["isCheck"]=="true"){
                                     ADMIN::CheckAppointmentById($_POST["check"]);
                                 }
                             } else if($_POST["action"]=="settings") {
@@ -44,19 +47,28 @@
                         </div>
                     </div>
                     <div class="content__block <?php if(isset($_POST["action"])&&$_POST["action"]=="appointments"){ echo 'active';} ?>" id="appointments">
-                        <?php $appointments = ADMIN::getAppointments();
+                        <?php 
+                            if (!isset($_GET['page']) ) {  
+                                $page = 1;  
+                            } else {  
+                                $page = $_GET['page'];  
+                            } 
+                            $results_per_page = 50;  
+                            $page_first_result = ($page-1) * $results_per_page;  
+                            $appointments = ADMIN::getAppointments($page_first_result,$results_per_page);
+                            $allAppointments = ADMIN::getAllAppointments();
                             if(count($appointments)>0){
                         ?>
-                        <h2 class="title">Appointments ( <?php echo count($appointments)?> )</h2>
+                        <h2 class="title">Appointments ( <?php echo count($allAppointments)?> )</h2>
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <td style="text-align:center;">ID</td>
-                                    <td>Name</td>
-                                    <td>Mail</td>
-                                    <td>Phone</td>
-                                    <td style="text-align:center;">Comments</td>
-                                    <td style="text-align:center;">Actions</td>
+                                    <td style="text-align:center;">№</td>
+                                    <td class="name">Name</td>
+                                    <td class="mail">Mail</td>
+                                    <td class="phone">Phone</td>
+                                    <td class="time">Time</td>
+                                    <td class="act" style="text-align:center;">Actions</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -65,15 +77,21 @@
                                 ?>  
                                     <tr>
                                         <td style="text-align:center;"><?php echo $appointments[$i]["App_ID"]?></td>
-                                        <td><?php echo $appointments[$i]["App_Name"]?></td>
-                                        <td><a href="mailto:<?php echo $appointments[$i]["App_Mail"]?>"><?php echo $appointments[$i]["App_Mail"]?></a></td>
-                                        <td><a href="tel:<?php echo $appointments[$i]["App_Phone"]?>"><?php echo $appointments[$i]["App_Phone"]?></a></td>
-                                        <td style="text-align:center;"><?php echo $appointments[$i]["App_Comments"]?></td>
-                                        <td style="text-align:center;">
+                                        <td class="name"><?php echo $appointments[$i]["App_Name"]?></td>
+                                        <td class="mail"><a href="mailto:<?php echo $appointments[$i]["App_Mail"]?>"><?php echo $appointments[$i]["App_Mail"]?></a></td>
+                                        <td class="phone"><a href="tel:<?php echo $appointments[$i]["App_Phone"]?>"><?php echo $appointments[$i]["App_Phone"]?></a></td>
+                                        <td class="time">
+                                            <?php 
+                                                $date = date_create($appointments[$i]["App_DateTime"]);
+                                                echo date_format($date, 'm-d-Y h:i:s A')
+                                            ?>
+                                        </td>
+                                        <td class="act" style="text-align:center;">
+                                            <a class="view" href="index.php?action=viewAppointment&id=<?php echo $appointments[$i]["App_ID"]?>"><img src="img/assets/eye.png" alt="View"></a>
                                             <?php if($appointments[$i]["App_Checked"]==1){?>
                                                 <img src="img/assets/checked.png" alt="Checked">
                                             <?php } else { ?>
-                                                <form action="" method="post" class="applicationCheckedForm">
+                                                <form action="" method="post" class="appointmentCheckedForm">
                                                     <input type="hidden" name="action" value="appointments">
                                                     <input type="hidden" name="check" value="<?php echo $appointments[$i]["App_ID"]?>">
                                                     <input type="hidden" name="isCheck" value="false">
@@ -90,9 +108,41 @@
                             </tbody>
                         </table>
                         <?php
+                            $results = ceil(count($allAppointments) / $results_per_page);
+                            if($results>1){
+                            ?>
+                            <div class="paginationBtns">
+                                <?php 
+                                if($page==$results&&$page-2>0){
+                                    ?>
+                                    <button link="index.php?action=admin&view=appointments&page=<?php echo $page-2?>"><?php echo $page-2?></button>
+                                    <?php
+                                }
+                                if($page>1){
+                                    ?>
+                                    <button link="index.php?action=admin&view=appointments&page=<?php echo $page-1?>"><?php echo $page-1?></button>
+                                    <?php
+                                }   
+                                ?>
+                                <button class="noactive"><?php echo $page?></button>
+                                <?php 
+                                if($page<$results){
+                                    ?>
+                                    <button link="index.php?action=admin&view=appointments&page=<?php echo $page+1?>"><?php echo $page+1?></button>
+                                    <?php
+                                }
+                                if($page==1&&$results>2){
+                                    ?>
+                                    <button link="index.php?action=admin&view=appointments&page=<?php echo $page+2?>"><?php echo $page+2?></button>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                            <?php
+                            }
                         } else{
                             ?>
-                                <h2 class="title">YOU DON`T HAVE AppointmentS</h2>
+                                <h2 class="title">YOU DON`T HAVE Appointments</h2>
                             <?php
                         } 
                         ?>

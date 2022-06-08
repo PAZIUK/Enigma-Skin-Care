@@ -36,6 +36,7 @@
                 <ul class="body">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="index.php#about">About Us</a></li>
+                    <li><a href="index.php?action=our-team">Our Team</a></li>
                     <li><a href="index.php?action=services">Services</a></li>
                     <li><a href="index.php#contacts">Locations</a></li>
                     <li><a href="index.php#contacts">Contact Us</a></li>

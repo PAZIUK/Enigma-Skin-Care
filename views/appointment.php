@@ -54,7 +54,7 @@
                         <div class="formRow">
                             <div class="inputBlock">
                                 <label for="comments">Comments</label>
-                                <textarea name="comments" id="comments" placeholder="Some Comments"></textarea>
+                                <textarea name="comments" id="comments" placeholder="Some Comments" maxlength="500"></textarea>
                             </div>
                         </div>
                         <button type="submit">SUBMIT</button>

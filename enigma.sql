@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2022 at 11:37 AM
+-- Generation Time: Jun 08, 2022 at 10:52 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -42,9 +42,7 @@ CREATE TABLE `appointment` (
 --
 
 INSERT INTO `appointment` (`App_ID`, `App_Name`, `App_Mail`, `App_Phone`, `App_Comments`, `App_Checked`, `App_DateTime`) VALUES
-(1, 'Serhiy Paziuk', 'paz.serhiy@gmail.com', '+380950218131', '', 0, '2022-05-29 20:28:45'),
-(2, 'Serhiy Paziuk', 'paz.serhiy@gmail.com', '+380950218131', 'sdasdasddadsaa', 0, '2022-05-29 20:30:48'),
-(3, 'Serhiy Paziuk', 'paz.serhiy@gmail.com', '+380950218131', 'asdasd', 1, '2022-05-29 20:48:25');
+(8, 'Serhiy Paziuk', 'paz.serhiy@gmail.com', '+380950218131', 'sdfh sadjh fjsa dhfsdj fhska dfhsjdaf hkas djfhksadjfh lksadjf haskl dfjhsa dkfjhask djf hksadfjhs adkjf hksa djfh kjadshfksj sdf asdf sdflksjdkfj asdfjskdjfal;ksd;jfsd fasdkflsajdf ;sdkflsdf sdlfkjsa ;fkilsdjfksdj fklsdjfskdlfj sdikfjsadklf jasdklfjsadkfcjsad;klf asdkfjsdlkfj sadkfjasdlkf jsadkf jsdfksdjf sakldfj asdkfjsadkf jsadklfj sadklf jsadkf jsakdfj sadlkfjs dakfjasdkfj sadkf jsadfkasd jfskdafj sadkf jsdkfjsadfk js dfk s djfsdkfjskdf jsadkfj sadfksa jdfk jsadkf jasdkfjsadkf jsa dkfj sadlf', 1, '2022-06-08 11:50:37');
 
 -- --------------------------------------------------------
 
@@ -121,7 +119,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `App_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `App_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `config`
