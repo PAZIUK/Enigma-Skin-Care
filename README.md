@@ -1,4 +1,4 @@
-# Enigma-Skin-Care - Project Description <br>
+# Enigma Skin Care - Project Description <br>
 
 ### About <br/>
 
