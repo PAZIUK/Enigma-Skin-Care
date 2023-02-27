@@ -6,7 +6,7 @@ Enigma Skin Care offers the full spectrum of innovative, age-reversing treatment
 
 The website was created by Serhiy Paziuk and [Stanislav Kovalchuk](https://github.com/Stanislavkvv) for Enigma Skin Care. <br/>
 
-### Link to the website you can find [here](https://github.com/PAZIUK/PAZIUK/blob/main/README.md#my-projects)<br/>
+### Link to the website you can find [here](https://github.com/PAZIUK#-websites)<br/>
 
 ## For creating were used <br/>
 
